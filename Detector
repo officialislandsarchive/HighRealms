@@ -425,7 +425,7 @@ local sections = {
 
 local knownMobs = {
     Mobs = {
-        "Flamelet", "Gizmo", "Slimegore", "GrimThorn", "Muncher", "Rattles", "Blue Flamelet"
+        "Flamelet", "Gizmo", "Slimegore", "GrimThorn", "Muncher", "Rattles", "Blue Flamelet", "Green Slime"
     }
 }
 
