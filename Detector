@@ -216,7 +216,7 @@ local knownItems = {
         "Carrot", "Corn", "White Mushroom", "Red Potato", "Tomato", "Strawberry", "Watermelon", "Wheat"
     },
     Item = {
-        "Void Shard", "Black Dye", "Blue Dye", "Spring", "Twilight Blade", "Bones", "Skull", "Skeleton Key", "Silver", "Cog", "Coal", "Basalt", "Molten Core", "Inferno Essence", "Light Source", "Scrap Metal", "Flame", "Copper", "Cobalt", "Elastic Essence", "Yellow Dye", "Stone", "Necrotic Essence", "Gold", "Green Dye", "Green Goo", "Green Slime Core", "Iron", "Magnet Shard", "Marble", "Twilight Essence", "White Dye", "Rage Essence", "Realm Key", "Recycled Blade", "Red Dye", "Clay", "Cloth", "Mystic Iron Fragment", "Mystic Gold Fragment", "Mystic Diamond Fragment", "Diamond", "Blue Flame", Rainbow Dye"
+        "Void Shard", "Black Dye", "Blue Dye", "Spring", "Twilight Blade", "Bones", "Skull", "Skeleton Key", "Silver", "Cog", "Coal", "Basalt", "Molten Core", "Inferno Essence", "Light Source", "Scrap Metal", "Flame", "Copper", "Cobalt", "Elastic Essence", "Yellow Dye", "Stone", "Necrotic Essence", "Gold", "Green Dye", "Green Goo", "Green Slime Core", "Iron", "Magnet Shard", "Marble", "Twilight Essence", "White Dye", "Rage Essence", "Realm Key", "Recycled Blade", "Red Dye", "Clay", "Cloth", "Mystic Iron Fragment", "Mystic Gold Fragment", "Mystic Diamond Fragment", "Diamond", "Blue Flame", "Rainbow Dye"
     },
     Store = {
         "Theme Pink", "Dragon Storage Chest Product", "Pro Backpack", "Island Expansion", "5,000 Coins Pack", "100,000 Coins Pack", "25,000 Coins Pack", "Island Flight", "Theme Storm", "Theme Crimson", "Theme Ancient", "1,000 Coins Pack", "Theme Obby"
