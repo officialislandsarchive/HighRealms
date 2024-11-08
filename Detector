@@ -116,6 +116,21 @@ local uiCornerQuest = Instance.new("UICorner")
 uiCornerQuest.CornerRadius = UDim.new(0, 8)
 uiCornerQuest.Parent = questButton
 
+local miscButton = Instance.new("TextButton")
+miscButton.Name = "MiscButton"
+miscButton.Text = "Misc"
+miscButton.TextScaled = true
+miscButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+miscButton.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
+miscButton.Size = UDim2.new(0.8, 0, 0.12, 0)
+miscButton.Position = UDim2.new(0.1, 0, 0.81, 0)
+miscButton.Font = Enum.Font.GothamBold
+miscButton.Parent = mainFrame
+
+local uiCornerItem = Instance.new("UICorner")
+uiCornerItem.CornerRadius = UDim.new(0, 8)
+uiCornerItem.Parent = miscButton
+
 local dragging = false
 local dragStart = nil
 local startPos = nil
@@ -192,7 +207,11 @@ local sections = {
     Stairs = "CommonModules.DefinitionModules.Block.DefinitionModules.Blocks.Stairs",
     Wood = "CommonModules.DefinitionModules.Block.DefinitionModules.Blocks.Wood",
 	ObbyBlocks = "CommonModules.DefinitionModules.Block.DefinitionModules.ObbyBlocks",
-	Trophies = "CommonModules.DefinitionModules.Block.DefinitionModules.Blocks.Trophies"
+	Trophies = "CommonModules.DefinitionModules.Block.DefinitionModules.Blocks.Trophies",
+	Npc = "CommonModules.DefinitionModules.Npc.DefinitionModules",
+	MobBehaviour = "CommonModules.DefinitionModules.MobBehaviour.DefinitionModules",
+	Effects = "CommonModules.DefinitionModules.Effects.DefinitionModules",
+	Mob = "CommonModules.DefinitionModules.Block.DefinitionModules.Blocks.Mob"
  }
 
 local knownItems = {
@@ -285,6 +304,18 @@ local knownItems = {
 	},
 	Trophies = {
 		"Technoblade Trophy", "Halloween Trophy"
+	},
+	Npc = {
+		"Gideon", "Maya", "Moola", "Oberon", "Traveling Bard"
+	},
+	MobBehaviour = {
+		"Melee Behaviour", "Tarantula Boss Behaviour"
+	},
+    Effects = {
+		"Burn", "Coin Boost", "Damage Boost", "Healing", "Jump Power", "Poisoned", "Slowed", "XP Boost", "Luck Boost"
+	},
+	Mob = {
+		"Arachnella Mob Block", "Blue Flamelet Mob Block", "Darkfang Spider Mob Block", "Flamelet Mob Block", "Gizmo Mob Block", "Green Slime Mob Block", "GrimThorn Mob Block", "Muncher Mob Block", "Rattles Mob Block", "Slimegore Mob Block",
 	}
 }
 
@@ -962,7 +993,151 @@ if #data['embeds'] > 0 then
     end
 end
 
-print("Output sent to Discord webhook!")end)
+print("Output sent to Discord webhook!")
+end)
+
+miscButton.MouseButton1Click:Connect(function()
+local replicatedStorage = game:GetService("ReplicatedStorage")
+local commonModules = replicatedStorage:WaitForChild("CommonModules")
+local blockDefinitionModules = commonModules:WaitForChild("DefinitionModules"):WaitForChild("Block"):WaitForChild("DefinitionModules"):WaitForChild("Blocks")
+local sections = {
+    Npc = "CommonModules.DefinitionModules.Npc.DefinitionModules",
+    MobBehaviour = "CommonModules.DefinitionModules.MobBehaviour.DefinitionModules",
+    Effects = "CommonModules.DefinitionModules.Effects.DefinitionModules",
+	TaskType = "CommonModules.DefinitionModules.TaskType.DefinitionModules",
+	Camp = "CommonModules.DefinitionModules.Camp.DefinitionModules",
+	Behaviours = "CommonModules.DefinitionModules.Behaviours.DefinitionModules"
+}
+
+local knownMisc = {
+    Npc = {
+        "Gideon", "Maya", "Moola", "Oberon", "Traveling Bard"
+    },
+    MobBehaviour = {
+        "Melee Behaviour", "Tarantula Boss Behaviour"
+    },
+    Effects = {
+        "Burn", "Coin Boost", "Damage Boost", "Healing", "Jump Power", "Poisoned", "Slowed", "XP Boost", "Luck Boost"
+    },
+	TaskType = {
+		"CharacterPosition", "InventoryCollect", "PlaceBlocks", "InPlace", "Economy", "Crafting", "Collection", "CoinBalance", "Level", "MarketPurchase", "DamageMob", "KillMob", "CosmeticChange", "TimePlayed"
+	},
+	Camp = {
+		"Mines2a", "Mines2b", "Mines2c", "Mines2d", "Mines3a", "Mines3b", "Mines3c", "Mines3d", "Mines3e", "Mines3f", "Mines4a", "Mines5a", "Mines5b", "Mines5c", "Mines5d", "Mines6a", "Mines6b", "Mines6c", "Mines6d", "Mines6e", "Mines6f", "Mines6g", "Mines8a", "Mines8b", "Mines1a", "Mines1k", "Mines1j", "Mines1i", "Mines1h", "Mines1g", "Mines1f", "Mines1e", "Mines1d", "Mines1c", "Mines1b", "Mines7a", "Mines9a", "Mire1", "Mire4", "Mire2", "Mire5", "Mire7", "Mines9b", "Mire3", "Mire6", "Mire0"
+	},
+	Behaviours = {
+		"Stair Behaviour", "Dirt Behaviour", "Crop Behaviour", "Door Behaviour", "Underling Behaviour", "Chest Behaviour", "Grass Behaviour", "Trap Door Behaviour", "Slime Behaviour", "Workbench Behaviour", "Checkpoint Behaviour", "Fence Behaviour", "Disappear Behaviour", "Damage Behaviour", "SpikeTrap Behaviour", "Rainbow Behaviour", "Spawn Block Behaviour", "SpiderWeb Behaviour", "Jumpscare Behaviour", "Bush Behaviour", "Bamboo Behaviour"	
+	}
+}
+
+local function getObjectByPath(root, path)
+    local current = root
+    for segment in string.gmatch(path, "[^.]+") do
+        current = current:FindFirstChild(segment)
+        if not current then
+            warn("Could not find: " .. segment .. " in path: " .. path)
+            return nil
+        end
+    end
+    return current
+end
+
+local clipboardOutput = ""
+local newMiscOutput = ""
+local newMiscFound = false
+
+for sectionName, path in pairs(sections) do
+    local section = getObjectByPath(replicatedStorage, path)
+    local knownMiscSet = {}
+    local newMisc = {}
+    
+    if knownMisc[sectionName] then
+        for _, miscName in ipairs(knownMisc[sectionName]) do
+            knownMiscSet[miscName] = true
+        end
+    end
+    
+    if section then
+        clipboardOutput = clipboardOutput .. "----- " .. sectionName .. " -----\n"
+        local hasModules = false
+        
+        for _, moduleScript in pairs(section:GetChildren()) do
+            if moduleScript:IsA("ModuleScript") then
+                local moduleName = moduleScript.Name
+                clipboardOutput = clipboardOutput .. moduleName .. "\n"
+                hasModules = true
+                
+                if not knownMiscSet[moduleName] then
+                    newMisc[moduleName] = true
+                    newMiscFound = true
+                end
+            end
+        end
+        
+        if not hasModules then
+            clipboardOutput = clipboardOutput .. "No ModuleScripts found in " .. sectionName .. "\n"
+        end
+    end
+    
+    if next(newMisc) then
+        newMiscOutput = newMiscOutput .. "----- New Misc in " .. sectionName .. " -----\n"
+        for MiscName in pairs(newMisc) do
+            newMiscOutput = newMiscOutput .. MiscName .. "\n"
+        end
+    end
+end
+
+local url = "https://discord.com/api/webhooks/1304266399929335838/YXjpzQ2NwGMUS4ZNlXrTvWHAuudtGL1Wr6D-OIKMXb3bTHIlOzFwNFJjCaqceQASfryQ"
+local data = {}
+
+local output = clipboardOutput .. "\n" .. (newMiscFound and newMiscOutput or "No new Misc found.")
+local messages = {}
+
+local embedColor = 16744575
+
+while #output > 0 do
+    local chunk = output:sub(1, 2000)
+    table.insert(messages, chunk)
+    output = output:sub(2001)
+end
+
+for i, message in ipairs(messages) do
+    local embed = {
+        ['title'] = "Misc List Chunk " .. tostring(i),
+        ['description'] = message,
+        ['color'] = embedColor,
+        ['footer'] = {
+            ['text'] = "Generated by the very best High Realms Player!"
+        }
+    }
+
+    data = {
+        ['embeds'] = { embed }
+    }
+
+    local jsonData = game:GetService("HttpService"):JSONEncode(data)
+
+    local response = request({
+        Url = url,
+        Method = "POST",
+        Headers = {
+            ["Content-Type"] = "application/json"
+        },
+        Body = jsonData
+    })
+
+    if response.Success then
+        print("Message " .. tostring(i) .. " sent to Discord webhook!")
+    else
+        print("Error sending message " .. tostring(i) .. " to Discord webhook:")
+        print(response.StatusCode)
+        print(response.StatusMessage)
+        print(response.Body)
+    end
+end
+
+print("Output sent to Discord webhook!")
+end)
 
 closeButton.MouseButton1Click:Connect(function()
     screenGui.Enabled = false
@@ -974,7 +1149,8 @@ local function addGradientTo(object, color1, color2)
     uiGradient.Parent = object
 end
 
-addGradientTo(itemButton, Color3.fromRGB(0, 170, 255), Color3.fromRGB(255, 255, 255))
-addGradientTo(mobButton, Color3.fromRGB(255, 128, 0), Color3.fromRGB(255, 255, 255))
-addGradientTo(badgeButton, Color3.fromRGB(255, 0, 0), Color3.fromRGB(255, 255, 255))
-addGradientTo(questButton, Color3.fromRGB(0, 255, 0), Color3.fromRGB(255, 255, 255))
+addGradientTo(miscButton, Color3.fromRGB(255, 105, 180), Color3.fromRGB(255, 255, 255))
+addGradientTo(itemButton, Color3.fromRGB(0, 255, 255), Color3.fromRGB(0, 0, 255))
+addGradientTo(mobButton, Color3.fromRGB(75, 0, 130), Color3.fromRGB(255, 69, 0))
+addGradientTo(badgeButton, Color3.fromRGB(255, 140, 0), Color3.fromRGB(255, 20, 147))
+addGradientTo(questButton, Color3.fromRGB(34, 193, 195), Color3.fromRGB(253, 187, 45))
