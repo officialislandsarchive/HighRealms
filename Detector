@@ -203,7 +203,7 @@ local knownItems = {
         "Wood Hoe"
     },
     Misc = {
-        "Player Pickaxe", "Joke Axe"
+        "Player Pickaxe", "Joke Axe", "Grave Digger Shovel", "Trick or Treat Bag"
     },
     Pickaxe = {
         "Wood Pickaxe", "Cobalt Pickaxe", "Stone Pickaxe", "Iron Pickaxe", "Gold Pickaxe", "Copper Pickaxe", "Diamond Pickaxe"
@@ -215,28 +215,28 @@ local knownItems = {
         "Bone Sword", "Clockwork Sword", "Cobalt Sword", "Copper Sword", "Gold Sword", "Inferno Sword", "Iron Sword", "Slime Sword", "Stone Sword", "Twilight Sword", "Wood Sword", "Dev Sword", "Diamond Sword", "Diamond Knife", "Diamond Hammer"
     },
     Food = {
-        "Carrot", "Corn", "White Mushroom", "Red Potato", "Tomato", "Strawberry", "Watermelon", "Wheat"
+        "Carrot", "Corn", "White Mushroom", "Red Potato", "Tomato", "Strawberry", "Watermelon", "Wheat", "Pumpkin", "Nightshade Berry"
     },
     Item = {
-        "Void Shard", "Black Dye", "Blue Dye", "Spring", "Twilight Blade", "Bones", "Skull", "Skeleton Key", "Silver", "Cog", "Coal", "Basalt", "Molten Core", "Inferno Essence", "Light Source", "Scrap Metal", "Flame", "Copper", "Cobalt", "Elastic Essence", "Yellow Dye", "Stone", "Necrotic Essence", "Gold", "Green Dye", "Green Goo", "Green Slime Core", "Iron", "Magnet Shard", "Marble", "Twilight Essence", "White Dye", "Rage Essence", "Realm Key", "Recycled Blade", "Red Dye", "Clay", "Cloth", "Mystic Iron Fragment", "Mystic Gold Fragment", "Mystic Diamond Fragment", "Diamond", "Blue Flame", "Rainbow Dye"
+        "Void Shard", "Black Dye", "Blue Dye", "Spring", "Twilight Blade", "Bones", "Skull", "Skeleton Key", "Silver", "Cog", "Coal", "Basalt", "Molten Core", "Inferno Essence", "Light Source", "Scrap Metal", "Flame", "Copper", "Cobalt", "Elastic Essence", "Yellow Dye", "Stone", "Necrotic Essence", "Gold", "Green Dye", "Green Goo", "Green Slime Core", "Iron", "Magnet Shard", "Marble", "Twilight Essence", "White Dye", "Rage Essence", "Realm Key", "Recycled Blade", "Red Dye", "Clay", "Cloth", "Mystic Iron Fragment", "Mystic Gold Fragment", "Mystic Diamond Fragment", "Diamond", "Blue Flame", "Rainbow Dye", "Barbed Arachnella Hair", "Venom Gland", "Arachnella Fang", "Granite", "Arachnella Heart", "Spider Silk", "Limestone"
     },
     Store = {
-        "Theme Pink", "Dragon Storage Chest Product", "Pro Backpack", "Island Expansion", "5,000 Coins Pack", "100,000 Coins Pack", "25,000 Coins Pack", "Island Flight", "Theme Storm", "Theme Crimson", "Theme Ancient", "1,000 Coins Pack", "Theme Obby"
-    },
+        "Theme Pink", "Dragon Storage Chest Product", "Pro Backpack", "Island Expansion", "5,000 Coins Pack", "100,000 Coins Pack", "25,000 Coins Pack", "Island Flight", "Theme Storm", "Theme Crimson", "Theme Ancient", "1,000 Coins Pack", "Theme Obby", "Healing Potion III", "Damage Boost Potion III", "Jump Power Potion III", "Trick or Treat Bags", "Luck Potion III", "Theme Halloween 2024", "Theme Blackhole", "XP Boost Potion III", "Coin Boost Potion III"
+		 },
     Block = {
-        "Grass", "Dirt", "Stone Block", "Marble Brick Block", "Silver Block", "Bedrock", "Basalt Block", "Cobblestone", "Marble Block", "Pink Stone Brick Block", "Lantern Block", "SpiderWeb", "Slime Block", "Ladder", "Tilled Dirt", "Torch", "Pink Grass", "Coal Block", "Cobalt Block", "Copper Block", "Fire Block", "Gold Block", "Iron Block", "Grass Weed", "Vines", "Wood Table", "Wooden Crate", "Wall Torch", "Danger Sign", "Electric FX Block", "Fog FX Block", "Rain FX Block", "Crimson Ornate Block", "Sword Throne", "Crimson Grass Block", "Crimson Moss Block", "Jungle Vines", "Jungle Grass Block", "Jungle Moss Block", "Tiki Head Block", "Tiki Pole Block", "Basalt Slab", "Stone Brick Block", "Red Brick Block", "Red Brick Slab", "Hay Bale", "Red Brick Vertical Slab", "Basalt Vertical Slab", "Spotlight", "Candles", "Hanging Lantern", "Wood Chair", "Wood Barrel", "Workbench", "Blue Wall Torch", "Orange Lightcube", "Green Lightcube", "Mushroom Block", "Yellow Lightcube", "Purple Lightcube", "Blue Torch", "Chain", "Diamond Block", "Blue Lightcube", "Mushroom", "Red Lightcube", "Rainbow Block"
+        "Grass", "Dirt", "Stone Block", "Marble Brick Block", "Silver Block", "Bedrock", "Basalt Block", "Cobblestone", "Marble Block", "Pink Stone Brick Block", "Lantern Block", "SpiderWeb", "Slime Block", "Ladder", "Tilled Dirt", "Torch", "Pink Grass", "Coal Block", "Cobalt Block", "Copper Block", "Fire Block", "Gold Block", "Iron Block", "Grass Weed", "Vines", "Wood Table", "Wooden Crate", "Wall Torch", "Danger Sign", "Electric FX Block", "Fog FX Block", "Rain FX Block", "Crimson Ornate Block", "Sword Throne", "Crimson Grass Block", "Crimson Moss Block", "Jungle Vines", "Jungle Grass Block", "Jungle Moss Block", "Tiki Head Block", "Tiki Pole Block", "Basalt Slab", "Stone Brick Block", "Red Brick Block", "Red Brick Slab", "Hay Bale", "Red Brick Vertical Slab", "Basalt Vertical Slab", "Spotlight", "Candles", "Hanging Lantern", "Wood Chair", "Wood Barrel", "Workbench", "Blue Wall Torch", "Orange Lightcube", "Green Lightcube", "Mushroom Block", "Yellow Lightcube", "Purple Lightcube", "Blue Torch", "Chain", "Diamond Block", "Blue Lightcube", "Mushroom", "Red Lightcube", "Rainbow Block", "Web Grass Path Block", "Mud Block", "Coffin Bed", "Ghost FX Block", "Limestone Block", "Jumpscare Block", "Watermelon Block", "Web Grass Block", "Marble Pillar Base", "Gargoyle Statue", "Pumpkin Block", "Marble Pillar", "Log", "Glowstone Block", "Toxic Sludge", "Jack O Lantern", "Spawn Block", "Granite Block", "Swamp Block", "Candelabra", "Cursed Relic", "Grave Headstone", "Lichen", "Peat Moss Block"
     },
     Chests = {
         "Dragonstone Chest", "Large Chest", "Small Chest", "Diamond Chest"
     },
     Crops = {
-        "White Mushroom Seed", "Wheat Seed", "Watermelon Seed", "Tomato Seed", "Strawberry Seed", "Red Potato Seed", "Corn Seed", "Carrot Seed"
+        "White Mushroom Seed", "Wheat Seed", "Watermelon Seed", "Tomato Seed", "Strawberry Seed", "Red Potato Seed", "Corn Seed", "Carrot Seed", "Pumpkin Seed", "Bamboo Plant", "Nightshade Berry Bush Seed"
     },
     Trees = {
-        "AshTreeA", "AshTreeB", "CherryTreeA", "CherryTreeB", "DarkHollowTallTreeA", "DarkHollowTallTreeB", "DarkHollowTallTreeC", "DarkHollowTallTreeD", "DarkHollowTallTreeE", "DarkHollowTreeA", "DarkHollowTreeB", "DarkHollowTreeC", "DarkHollowTreeD", "DarkHollowTreeE", "MahoganyTreeA", "MahoganyTreeB", "OakTreeA", "OakTreeB", "OakTreeC", "OakTreeD", "OakTreeE"
+        "AshTreeA", "AshTreeB", "CherryTreeA", "CherryTreeB", "DarkHollowTallTreeA", "DarkHollowTallTreeB", "DarkHollowTallTreeC", "DarkHollowTallTreeD", "DarkHollowTallTreeE", "DarkHollowTreeA", "DarkHollowTreeB", "DarkHollowTreeC", "DarkHollowTreeD", "DarkHollowTreeE", "MahoganyTreeA", "MahoganyTreeB", "OakTreeA", "OakTreeB", "OakTreeC", "OakTreeD", "OakTreeE", "WebTreeB", "WebTreeC", "WebTreeA"
     },
     UnderlingAnchors = {
-        "Carrot Underling Anchor", "Oak Wood Underling Anchor", "Mahogany Wood Underling Anchor", "Cobalt Underling Anchor", "Watermelon Underling Anchor", "Dark Hollow Wood Underling Anchor", "Basalt Underling Anchor", "Clay Underling Anchor", "Coal Underling Anchor", "Gold Underling Anchor", "Copper Underling Anchor", "Iron Underling Anchor", "Ash Wood Underling Anchor", "Corn Underling Anchor", "Silver Underling Anchor", "Red Potato Underling Anchor", "Tomato Underling Anchor", "Strawberry Underling Anchor", "White Mushroom Underling Anchor", "Cherry Wood Underling Anchor", "Stone Underling Anchor", "Wheat Underling Anchor", "Marble Underling Anchor", "Flower Underling Anchor"
+        "Carrot Underling Anchor", "Oak Wood Underling Anchor", "Mahogany Wood Underling Anchor", "Cobalt Underling Anchor", "Watermelon Underling Anchor", "Dark Hollow Wood Underling Anchor", "Basalt Underling Anchor", "Clay Underling Anchor", "Coal Underling Anchor", "Gold Underling Anchor", "Copper Underling Anchor", "Iron Underling Anchor", "Ash Wood Underling Anchor", "Corn Underling Anchor", "Silver Underling Anchor", "Red Potato Underling Anchor", "Tomato Underling Anchor", "Strawberry Underling Anchor", "White Mushroom Underling Anchor", "Cherry Wood Underling Anchor", "Stone Underling Anchor", "Wheat Underling Anchor", "Marble Underling Anchor", "Flower Underling Anchor", "Pumpkin Underling Anchor", "Limestone Underling Anchor", "Granite Underling Anchor", "Web Wood Underling Anchor"
     },
     Carpet = {
         "Carpet Lime", "Carpet Brown", "Carpet Blue", "Carpet Grey", "Carpet Orange", "Carpet Red", "Carpet Light Blue", "Carpet Black", "Carpet Green", "Carpet Purple", "Carpet Yellow", "Carpet White", "Carpet Pink", "Carpet Cyan"
@@ -245,16 +245,16 @@ local knownItems = {
         "Clay White", "Clay Purple", "Clay Yellow", "Clay Light Blue", "Clay Block", "Clay Brown", "Clay Pink", "Clay Black", "Clay Lime", "Clay Orange", "Clay Red", "Clay Vase", "Clay Green", "Clay Cyan", "Clay Blue"
     },
     Creator = {
-        "Sisterguard Block", "DV Block", "TanqR Block", "Jessetc Block", "Hoopie Block", "Gravycatman Block", "Witchycatlady Block"
+        "Sisterguard Block", "DV Block", "TanqR Block", "Jessetc Block", "Hoopie Block", "Gravycatman Block", "Witchycatlady Block", "LalaFlowergirl Block", "Ashlanne Block", "DevNote Block", "Wild Goat Block", "ChunkySeal Block", "Beefy Block", "Larand Block", "CosmicCometsInc Block"
     },
     Doors = {
         "Mahogany Trap Door", "Dark Hollow Door", "Mahogany Door", "Dark Hollow Trap Door", "Ash Door", "Oak Door", "Cherry Trap Door", "Cherry Door", "Ash Trap Door", "Oak Trap Door"
     },
     Fence = {
-		"Ash Fence", "Cherry Fence", "DarkHollow Fence", "Mahogany Fence", "Oak Fence", "Stone Fence", "StoneBrick Fence"
+		"Ash Fence", "Cherry Fence", "DarkHollow Fence", "Mahogany Fence", "Oak Fence", "Stone Fence", "StoneBrick Fence", "Web Fence", "Bone Fence"
     },
     Flowers = {
-        "Pink Potted Flower", "Green Poppy Flower", "Yellow Poppy Flower", "White Poppy Flower", "Yellow Potted Flower", "Blue Poppy Flower", "Blue Potted Flower", "White Potted Flower", "Red Potted Flower", "Purple Potted Flower", "Red Poppy Flower", "Cyan Potted Flower", "Black Poppy Flower", "Rainbow Poppy Flower"
+        "Pink Potted Flower", "Green Poppy Flower", "Yellow Poppy Flower", "White Poppy Flower", "Yellow Potted Flower", "Blue Poppy Flower", "Blue Potted Flower", "White Potted Flower", "Red Potted Flower", "Purple Potted Flower", "Red Poppy Flower", "Cyan Potted Flower", "Black Poppy Flower", "Rainbow Poppy Flower", "Mire Lotus"
     },
     Furniture = {
         "Wood Stool", "Teal Table Lamp", "Red Bed", "Campfire", "Yellow Bed", "Tumbler", "Blue Bed", "Red Table Lamp", "Light Blue Bed", "Teal Luxury Sofa", "Black Bed", "Purple Bed", "Brown Bed", "Sofa Section Corner", "Tall Lamp", "Gold Table Lamp", "Large Umbrella", "Sofa Section Basic", "Lime Bed", "Sofa Section", "Cyan Bed", "Nightstand", "Orange Bed", "Pink Bed", "Plate Set", "Red Royal Bed", "Metal Grate", "Mug", "Grey Table Lamp", "Bookcase", "Green Bed"
@@ -263,28 +263,28 @@ local knownItems = {
         "Glass Brown", "Glass", "Glass Pink", "Glass Lime", "Glass Black", "Glass Red", "Glass White", "Glass Green", "Glass Cyan", "Glass Yellow", "Glass Light Blue", "Glass Blue", "Glass Purple", "Glass Orange"
     },
     Leaves = {
-        "Mahogany Leaves", "Oak Leaves", "Dark Hollow Leaves", "Cherry Leaves", "Ash Leaves"
+        "Mahogany Leaves", "Oak Leaves", "Dark Hollow Leaves", "Cherry Leaves", "Ash Leaves", "Web Leaves",
     },
     Neon = {
         "Neon Cyan", "Neon Red", "Neon Green", "Neon Pink", "Neon Yellow", "Neon Black", "Neon Purple", "Neon White", "Neon Blue", "Neon Orange", "Neon Light Blue", "Neon Lime"
     },
     OreBlocks = {
-        "Clay Mud Block", "Basalt Rock Block", "Cobalt Ore Block", "Coal Ore Block", "Iron Ore Block", "Copper Ore Block", "Gold Ore Block", "Stone Rock Block", "Silver Ore Block", "Marble Rock Block", "Diamond Ore Block"
+        "Clay Mud Block", "Basalt Rock Block", "Cobalt Ore Block", "Coal Ore Block", "Iron Ore Block", "Copper Ore Block", "Gold Ore Block", "Stone Rock Block", "Silver Ore Block", "Marble Rock Block", "Diamond Ore Block", "Limestone Ore Block", "Granite Ore Block"
     },
     Slabs = {
-        "Stone Slab", "Mahogany Vertical Slab", "Marble Brick Slab", "Pink Stone Brick Slab", "Oak Vertical Slab", "Stone Brick Slab", "Oak Slab", "Cherry Vertical Slab", "Dark Hollow Vertical Slab", "Marble Brick Vertical Slab", "Dark Hollow Slab", "Stone Vertical Slab", "Stone Brick Vertical Slab", "Pink Stone Brick Vertical Slab", "Cherry Slab", "Ash Vertical Slab", "Ash Slab", "Mahogany Slab"
+        "Stone Slab", "Mahogany Vertical Slab", "Marble Brick Slab", "Pink Stone Brick Slab", "Oak Vertical Slab", "Stone Brick Slab", "Oak Slab", "Cherry Vertical Slab", "Dark Hollow Vertical Slab", "Marble Brick Vertical Slab", "Dark Hollow Slab", "Stone Vertical Slab", "Stone Brick Vertical Slab", "Pink Stone Brick Vertical Slab", "Cherry Slab", "Ash Vertical Slab", "Ash Slab", "Mahogany Slab", "Web Slab"
     },
     Stairs = {
-        "Oak Stair", "Stone Brick Stair", "Red Brick Stair", "Stone Stair", "Dark Hollow Stair", "Basalt Stair", "Marble Brick Stair", "Cherry Stair", "Pink Stone Brick Stair", "Mahogany Stair", "Ash Stair"
+        "Oak Stair", "Stone Brick Stair", "Red Brick Stair", "Stone Stair", "Dark Hollow Stair", "Basalt Stair", "Marble Brick Stair", "Cherry Stair", "Pink Stone Brick Stair", "Mahogany Stair", "Ash Stair", "Web Stair"
     },
     Wood = {
-        "Dark Hollow Wood", "Ash Wood", "Oak Plank", "Mahogany Plank", "Cherry Wood", "Mahogany Wood", "Oak Wood", "Ash Plank", "Cherry Plank", "Dark Hollow Plank"
+        "Dark Hollow Wood", "Ash Wood", "Oak Plank", "Mahogany Plank", "Cherry Wood", "Mahogany Wood", "Oak Wood", "Ash Plank", "Cherry Plank", "Dark Hollow Plank", "Web Plank", "Web Wood"
     },
 	ObbyBlocks = {
 		"Finish Line Block", "Kill Block", "Checkpoint Block", "Disappear Block", "Spiked Floor Trap"
 	},
 	Trophies = {
-		"Technoblade Trophy"
+		"Technoblade Trophy", "Halloween Trophy"
 	}
 }
 
@@ -408,7 +408,7 @@ local sections = {
 
 local knownMobs = {
     Mobs = {
-        "Flamelet", "Gizmo", "Green Slime", "GrimThorn", "Muncher", "Rattles"
+        "Flamelet", "Gizmo", "Green Slime", "GrimThorn", "Muncher", "Rattles","Darkfang Spider", "Arachnella", "Blue Flamelet", "Slimegore"
     }
 }
 
@@ -603,7 +603,13 @@ local knownBadges = {
 "Slime Killer",
 "Leap of Faith",
 "The Wheel Turns",
-"Farlight Crystals"
+"Farlight Crystals",
+"Collect Trick or Treat Bag",
+"Pumpkin Snatcher",
+"Reached Darkfang Mire",
+"Arachnella",
+"Farlight Crystals Mire",
+"I like Potatoes"
     }
 }
 
